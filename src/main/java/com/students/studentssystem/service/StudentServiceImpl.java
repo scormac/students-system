@@ -33,7 +33,7 @@ public class StudentServiceImpl implements StudentService{
             		student = optionalStudent.get();
         	else
             		throw new RuntimeException("Student not found for id :: " + id);
-        return student;
+        	return student;
 	}
 
 	@Override
