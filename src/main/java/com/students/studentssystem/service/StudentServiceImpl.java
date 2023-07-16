@@ -28,12 +28,11 @@ public class StudentServiceImpl implements StudentService{
 	@Override
 	public Student getStudentById(Long id) {
 		Optional<Student> optionalStudent = studentRepo.findById(id);
-        Student student = null;
-        if (optionalStudent.isPresent()) {
-            student = optionalStudent.get();
-        } else {
-            throw new RuntimeException("Student not found for id :: " + id);
-        }
+        	Student student = null;
+        	if (optionalStudent.isPresent())
+            		student = optionalStudent.get();
+        	else
+            		throw new RuntimeException("Student not found for id :: " + id);
         return student;
 	}
 
